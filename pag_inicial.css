@@ -1,0 +1,278 @@
+body,
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+  --body-color: black;
+  --body-bg: url(pdf-prj.png) no-repeat center center;
+  --rod-color: black;
+  --rod-bg: rgb(196, 196, 196);
+  --hed-bg: rgb(196, 196, 196);
+  --hamb-color: black;
+  --menu-bg:#b4b4b4;
+  --menu-bb:rgba(0, 0, 0, 0.05);
+  --general-bgc:rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode:root{
+  --body-color: rgb(228, 228, 228);
+  --body-bg: url(fundo_dark.png) no-repeat center center;
+  --rod-color: white;
+  --rod-bg: black;
+  --hed-bg: black;
+  --hamb-color: white;
+  --menu-bg:rgb(90, 90, 90);
+  --menu-bb:rgba(206, 206, 206, 0.05);
+  --general-bgc:rgba(2, 2, 10, 0.5);;
+}
+
+body{
+  color: var(--body-color);
+}
+
+main{
+    background: var(--body-bg);
+    background-size: cover;
+    height: 92vh;
+}
+
+#switch {
+display: none;
+}
+
+a {
+    color: var(--body-color);
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a:hover {
+    background: rgb(165, 165, 165);
+  }
+  
+.fundo{
+    height: 100%;
+    width: 100%;
+}
+
+
+#header {
+  box-sizing: border-box;
+  height: 100px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--hed-bg);
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+.rodape {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--rod-bg);
+    color: var(--rod-color);
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    bottom: 0px;
+    position:fixed;
+    width: 100%;
+}
+
+.text_general{
+
+    background-color: var(--general-bgc);
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.titulo_Origem {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.texto_origem{
+    padding-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.titulo_tipos {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.texto_tipos{
+    padding-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.titulo_class {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.texto_class{
+    padding-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.titulo_sobre {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.texto_sobre{
+    padding-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.titulo_estrutura {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.imagem_origem{
+    margin: 0 10px 0 0;
+    padding: 10px;
+    display: flex;
+    height: 300px;
+}
+
+.imagem_tipos{
+    margin: 0 10px 0 0;
+    padding: 10px;
+    display: flex;
+    height: 280px;
+}
+
+.imagem_tipos1{
+    margin: 0 10px 0 0;
+    padding: 10px;
+    display: flex;
+    height: 280px;
+}
+
+.imagem_class{
+    margin: 0 10px 0 0;
+    padding: 5px;
+    height: auto;
+    width: 90vw;
+}
+
+.imagem_sobre{
+    width: 60%;
+    border-left: 40%;
+    text-align: center; 
+}
+
+.general-div {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px 40px 10px;
+}
+
+.internal-div {
+  display: block;
+  margin: 10px 20px 10px 20px;
+}
+.estru_p {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 2000px) {
+  #menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  right: 0px;
+  background: var(--menu-bg);
+  transition: 0.6s;
+  z-index: 1000;
+  height: 0px;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+#nav.active #menu {
+  height: calc(100vh - 100px);
+  visibility: visible;
+  overflow-y: auto;
+}
+#menu a {
+  padding: 1rem 0;
+  margin: 0 1rem;
+  border-bottom: 2px solid var(--menu-bb);
+}
+#btn-mobile {
+  display: flex;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+#hamburger {
+  color: var(--hamb-color);
+  border-top: 2px solid;
+  width: 20px;
+}
+#hamburger::after,
+#hamburger::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  margin-top: 5px;
+  transition: 0.3s;
+  position: relative;
+}
+#nav.active #hamburger {
+  border-top-color: transparent;
+}
+#nav.active #hamburger::before {
+  transform: rotate(135deg);
+}
+#nav.active #hamburger::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}
+
+}
